@@ -13,22 +13,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Follow system dark/light preference */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var m=window.matchMedia('(prefers-color-scheme: dark)').matches;if(m)document.documentElement.classList.add('dark');}catch(e){}})()`,
-          }}
-        />
-      </head>
-      <body className="min-h-screen bg-background text-foreground">
-        <header className="sticky top-0 z-50 shadow-sm bg-white dark:bg-slate-900">
+    <html lang="en">
+      <body className="min-h-screen bg-background text-foreground flex flex-col">
+        <header className="sticky top-0 z-50 shadow-sm bg-white/80 backdrop-blur-sm border-b border-sky-100">
           <div className="max-w-6xl mx-auto">
             <NavBar />
           </div>
         </header>
-        <main className="max-w-6xl mx-auto px-6 py-10">{children}</main>
+
+        <main className="flex-1 max-w-6xl mx-auto w-full px-6 py-10">
+          {children}
+        </main>
+
+        {/* Footer */}
+        <footer className="mt-auto border-t border-sky-100 bg-white/60 backdrop-blur-sm">
+          <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-slate-500">
+            <span>© 2026 Course Catalog · Advanced Web Technologies Lab 2</span>
+            <div className="flex items-center gap-4">
+              <a href="/courses" className="hover:text-sky-600 transition-colors">Courses</a>
+              <a href="/about" className="hover:text-sky-600 transition-colors">About</a>
+              <a
+                href="https://github.com/beka070/course-catalog-2-lab2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-sky-600 transition-colors"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
