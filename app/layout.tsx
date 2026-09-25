@@ -27,11 +27,12 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer className="mt-auto border-t border-sky-100 bg-white/60 backdrop-blur-sm">
-          <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-slate-500">
-            <span>© 2026 Course Catalog · Advanced Web Technologies Lab 2</span>
+          <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center gap-3 text-sm text-slate-400">
             <div className="flex items-center gap-4">
               <a href="/courses" className="hover:text-sky-600 transition-colors">Courses</a>
+              <span>·</span>
               <a href="/about" className="hover:text-sky-600 transition-colors">About</a>
+              <span>·</span>
               <a
                 href="https://github.com/beka070/course-catalog-2-lab2"
                 target="_blank"
@@ -41,6 +42,9 @@ export default function RootLayout({
                 GitHub
               </a>
             </div>
+            <span className="text-slate-400 text-xs">
+              © 2026 Course Catalog · Advanced Web Technologies Lab 2
+            </span>
           </div>
         </footer>
       </body>

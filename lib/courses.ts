@@ -5,56 +5,69 @@ export type Course = {
   credits: number;
   isElective: boolean;
   likes: number;
+  category: string;
 };
 
 const courses: Course[] = [
   {
-    id: "modern-frontend",
-    title: "Modern Frontend: React & Next.js",
-    description: "React 19, Server Components, and the App Router.",
-    credits: 5,
+    id: "intro-web",
+    title: "Introduction to Web Development",
+    description:
+      "Learn the fundamentals of HTML, CSS, and JavaScript. Build your first websites from scratch and understand how the web works.",
+    credits: 3,
     isElective: false,
-    likes: 24,
+    likes: 142,
+    category: "Web",
   },
   {
-    id: "backend-fastapi",
-    title: "Backend Foundations: FastAPI",
-    description: "Async REST APIs in Python with FastAPI and Pydantic.",
-    credits: 5,
-    isElective: false,
-    likes: 19,
-  },
-  {
-    id: "databases-postgresql",
-    title: "Relational Databases: PostgreSQL",
-    description: "Schema design, SQLAlchemy, and migrations with Alembic.",
-    credits: 5,
-    isElective: false,
-    likes: 15,
-  },
-  {
-    id: "api-design",
-    title: "API Design: REST vs GraphQL",
-    description: "Comparing REST and GraphQL in practice.",
-    credits: 4,
-    isElective: true,
-    likes: 11,
-  },
-  {
-    id: "web-security",
-    title: "Web Security Essentials",
-    description: "JWT/OAuth2, defending against XSS, CSRF, SQL injection.",
+    id: "react-nextjs",
+    title: "React & Next.js",
+    description:
+      "Master modern front-end development with React hooks, component patterns, and server-side rendering with Next.js.",
     credits: 4,
     isElective: false,
-    likes: 21,
+    likes: 218,
+    category: "Web",
   },
   {
-    id: "ai-integration",
-    title: "AI/LLM Integration",
-    description: "LLM features in an app, wired up via the OpenAI API.",
-    credits: 5,
+    id: "databases-sql",
+    title: "Databases & SQL",
+    description:
+      "Understand relational databases, write complex SQL queries, and learn database design principles and normalization.",
+    credits: 3,
+    isElective: false,
+    likes: 97,
+    category: "Backend",
+  },
+  {
+    id: "algorithms-ds",
+    title: "Algorithms & Data Structures",
+    description:
+      "Explore sorting, searching, graphs, and dynamic programming. Prepare for technical interviews.",
+    credits: 4,
+    isElective: false,
+    likes: 183,
+    category: "CS Fundamentals",
+  },
+  {
+    id: "mobile-react-native",
+    title: "Mobile Development with React Native",
+    description:
+      "Build cross-platform iOS and Android apps using React Native. Covers navigation, state, and native APIs.",
+    credits: 3,
     isElective: true,
-    likes: 32,
+    likes: 134,
+    category: "Mobile",
+  },
+  {
+    id: "cloud-devops",
+    title: "Cloud Computing & DevOps",
+    description:
+      "Deploy applications to AWS and Azure. Learn Docker, Kubernetes, CI/CD pipelines, and infrastructure as code.",
+    credits: 4,
+    isElective: true,
+    likes: 76,
+    category: "DevOps",
   },
 ];
 
